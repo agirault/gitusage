@@ -61,6 +61,12 @@ $ git cherry-pick <commit>
 ```
 $ gitk
 ```
+###Remove a commit
+Be careful, this action will remove ALL commits done after the one to reset to, as well as ALL changes in work directory  
+IT CAN NOT BE UNDONE
+```
+$ git reset --hard <commit>
+```
 
 ###Synchronizing a repository with another remote repository ([example](http://www.slicer.org/slicerWiki/index.php/Documentation/Nightly/Developers/Tutorials/BuildTestPackageDistributeExtensions))
 ```
@@ -79,6 +85,7 @@ http://github.com/<username>/<repository>/compare/<commit1>...<commit2>
 ###Modify username/email information of author/committer for one or several commits ([StakOverflow](http://stackoverflow.com/questions/750172/how-do-i-change-the-author-of-a-commit-in-git))
 Use [this script](http://help.github.com/articles/changing-author-info)
 ```
+$ cd <Code Dir>
 $ sh /path/to/gistfile1.sh
 $ git push -f
 ```
@@ -93,12 +100,14 @@ TODO
 
 - Non Fast-Forward commit
 ```
+$ git push
 To git@github.com:<username>/<RepoName>.git
  ! [rejected]        master -> master (non-fast-forward)
 error: failed to push some refs to 'git@github.com:<username>/<RepoName>.git'
 To prevent you from losing history, non-fast-forward updates were rejected
 Merge the remote changes before pushing again.  See the 'Note about
 fast-forwards' section of 'git push --help' for details.
+$ git push -f
 ```
 
 ##All Commands
@@ -117,6 +126,7 @@ $ git clone git@github.com:adrienkaiser/<RepoName>.git
 $ git add <file1> <file2>
 $ git commit -m '<comment>'
 $ git push
+$ git push -f
 ```
 ```
 $ git checkout -b <branch name> origin
@@ -130,11 +140,12 @@ $ git branch -D <branch name>
 $ git log
 $ git cherry-pick <commit>
 $ gitk
+$ git reset --hard <commit>
 ```
 ```
-git remote add upstream git@github.com:<username>/<repository>
-git fetch upstream
-git checkout master
-git reset --hard upstream/master
-git push origin master
+$ git remote add upstream git@github.com:<username>/<repository>
+$ git fetch upstream
+$ git checkout master
+$ git reset --hard upstream/master
+$ git push origin master
 ```

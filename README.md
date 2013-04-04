@@ -9,20 +9,20 @@ All useful git commands
 
 ###Setup Git ([Git doc](http://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup))
 - Configure username `$ git config --global user.name <username>`
-- Configure email address `$ git config --global user.email <email@email.com>`
+- Configure email address `$ git config --global user.email <email>`
 - Check the configuration `$ git config --list`
 
 ###Create repository
 
 #####From Github
 - Create repository on `github.com`
-- Clone repository: `$ git clone git@github.com:adrienkaiser/<RepoName>.git`
+- Clone repository: `$ git clone git@github.com:<username>/<RepoName>.git`
 
 #####From Local
 - Move to code directory `$ cd <Code Dir>`
 - Initialize a new Git repository `$ git init`
 - Create repository on `github.com`
-- Link local directory to remote github repository `$ git remote add origin git@github.com:adrienkaiser/<RepoName>.git`
+- Link local directory to remote github repository `$ git remote add origin git@github.com:<username>/<RepoName>.git`
 
 ##Commit changes
 
@@ -89,11 +89,17 @@ $ git push -f
 - Access denied
 ```
 TODO
+
 ```
 
 - Non Fast-Forward commit
 ```
-TODO
+To git@github.com:<username>/<RepoName>.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:<username>/<RepoName>.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes before pushing again.  See the 'Note about
+fast-forwards' section of 'git push --help' for details.
 ```
 
 ##All Commands

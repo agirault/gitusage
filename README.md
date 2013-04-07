@@ -5,7 +5,7 @@ All useful git commands
 ##Start
 
 ###Install Git
-- Download the latest stable release on `http://git-scm.com/downloads`
+- Download the latest stable release on http://git-scm.com/downloads
 
 ###Setup Git ([Git doc](http://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup))
 - Configure username `$ git config --global user.name <username>`

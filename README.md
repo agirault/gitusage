@@ -52,7 +52,7 @@ All useful git commands
 $ git log
 ```
 
-###Apply 1 commit from another directory ([link](http://wiki.koha-community.org/wiki/Using_Git_Cherry_Pick))
+###Apply 1 commit from another branch ([link](http://wiki.koha-community.org/wiki/Using_Git_Cherry_Pick))
 ```
 $ git cherry-pick <commit>
 ```

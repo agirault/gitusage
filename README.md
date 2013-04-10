@@ -89,6 +89,7 @@ $ cd <Code Dir>
 $ sh /path/to/gistfile1.sh
 $ git push -f
 ```
+**Warning:** Rewrite the history by changing author/committer info will **change the tag** of all the modified commits
 
 ##Issues
 

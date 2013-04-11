@@ -28,7 +28,7 @@ All useful git commands
 
 <img width="40%" src="http://git-scm.com/figures/18333fig0106-tn.png"/>
 
-- Add all modified files to the staging area `$ git add <file1> <file2>`
+- Add or remove all modified files to the staging area `$ git add/rm <file1> <file2>`
 - Commit changes to these files with comment `$ git commit -m '<comment>'`
 - Push local changes to remote repository `$ git push`
 
@@ -131,7 +131,7 @@ $ git remote add origin git@github.com:adrienkaiser/<RepoName>.git
 $ git clone git@github.com:adrienkaiser/<RepoName>.git
 ```
 ```
-$ git add <file1> <file2>
+$ git add/rm <file1> <file2>
 $ git commit -m '<comment>'
 $ git push
 $ git push -f

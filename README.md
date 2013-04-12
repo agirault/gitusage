@@ -56,6 +56,12 @@ $ git log
 ```
 $ git cherry-pick <commit>
 ```
+To apply a commit from another repository:
+```
+$ git remote add upstream <repo>
+$ git fetch upstream
+-> After fetching the other repository, all its commits will be usable by cherry-pick
+```
 
 ###Display Git GUI
 ```

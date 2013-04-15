@@ -47,9 +47,24 @@ All useful git commands
 
 ##Other features
 
+###Create a tag ([Git doc](http://git-scm.com/book/en/Git-Basics-Tagging))
+To create a tag for the current commit, just use git tag. To tag a given commit, give the commit id to git tag:  
+```
+$ git tag -a vX.X -m 'Version X.X' [commit]
+$ git push --tags
+
+$ git show vX.X
+```
+
+To remove a tag locally and remotely: ([link](http://wptheming.com/2011/04/add-remove-github-tags/))  
+```
+$ git tag -d vX.X
+$ git push origin :vX.X
+```
+
 ###See list of all commits
 ```
-$ git log
+$ git log [-1] [--pretty=oneline]
 ```
 
 ###Apply 1 commit from another branch ([link](http://wiki.koha-community.org/wiki/Using_Git_Cherry_Pick))
@@ -151,7 +166,14 @@ $ git merge <branch name> master
 $ git branch -D <branch name>
 ```
 ```
-$ git log
+$ git tag -a vX.X -m 'Version X.X' [commit]
+$ git push --tags
+$ git show vX.X
+$ git tag -d vX.X
+$ git push origin :vX.X
+```
+```
+$ git log [-1] [--pretty=oneline]
 $ git cherry-pick <commit>
 $ gitk
 $ git reset --hard <commit>

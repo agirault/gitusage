@@ -19,7 +19,7 @@ All useful git commands
 - Clone repository: `$ git clone git@github.com:<username>/<RepoName>.git`
 
 #####From Local
-- Move to code directory `$ cd <Code Dir>`
+- Move to code directory `$ cd <RepoName>`
 - Initialize a new Git repository `$ git init`
 - Create repository on `github.com`
 - Link local directory to remote github repository `$ git remote add origin git@github.com:<username>/<RepoName>.git`
@@ -61,6 +61,15 @@ To remove a tag locally and remotely: ([link](http://wptheming.com/2011/04/add-r
 $ git tag -d vX.X
 $ git push origin :vX.X
 ```
+
+To apply a tag from a repository to a fork or any other repository: ([link](http://stackoverflow.com/questions/1357086/git-how-do-i-pull-a-tagged-revision-into-my-fork))
+```
+$ git clone git@github.com:<ForkUsername>/<RepoName>.git
+$ cd <RepoName>
+$ git fetch git@github.com:<BaseUsername>/<RepoName>.git "refs/tags/*:refs/tags/*"
+$ git push --tags
+```
+
 
 ###See list of all commits
 ```
@@ -171,6 +180,11 @@ $ git push --tags
 $ git show vX.X
 $ git tag -d vX.X
 $ git push origin :vX.X
+
+$ git clone git@github.com:<ForkUsername>/<RepoName>.git
+$ cd <RepoName>
+$ git fetch git@github.com:<BaseUsername>/<RepoName>.git "refs/tags/*:refs/tags/*"
+$ git push --tags
 ```
 ```
 $ git log [-1] [--pretty=oneline]

@@ -70,6 +70,11 @@ $ git fetch git@github.com:<BaseUsername>/<RepoName>.git "refs/tags/*:refs/tags/
 $ git push --tags
 ```
 
+###Create diff info from last commit to current working directory
+```
+$ git diff
+```
+
 
 ###See list of all commits
 ```
@@ -187,6 +192,7 @@ $ git fetch git@github.com:<BaseUsername>/<RepoName>.git "refs/tags/*:refs/tags/
 $ git push --tags
 ```
 ```
+$ git diff
 $ git log [-1] [--pretty=oneline]
 $ git cherry-pick <commit>
 $ gitk
